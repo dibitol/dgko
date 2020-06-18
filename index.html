@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Doğum Günlerini Unutmaya SON!</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+
+
+</head>
+<body>
+	<h1>Masatakayashi™💖</h1>
+	<h4>Bu site bir daha kimse birbirinin doğum gününü unutmasın diye yapıldı</h4p>
+        <h2>🎉🎉✨✨</h2>
+	<div id="container">
+		<h2 class="isimTarih">Bora Öden 23 Ocak&nbsp;</h2><h3 id="bora"> </h3><br>
+		<h2 class="isimTarih">Arda Ozan Doğan 29 Ocak&nbsp;</h2><h3 id="arda"></h3><br>
+		<h2 class="isimTarih">Ömer Kavas 11 Nisan&nbsp;</h2><h3 id="omer"></h3><br>
+		<h2 class="isimTarih">Bedirhan Uyaroğlu 13 Mayıs&nbsp;</h2><h3 id="bedo"></h3><br>
+		<h2 class="isimTarih">Emek Irmak 18 Haziran&nbsp;</h2><h3 id="emek"></h3><br>
+		<h2 class="isimTarih">Toprak Karademir 27 Haziran&nbsp;</h2><h3 id="toprak"></h3><br>
+		<h2 class="isimTarih">Emre Garani 9 Temmuz&nbsp;</h2><h3 id="emre"></h3><br>
+		<h2 class="isimTarih">Abdullah Efe Nergiz 21 Eylül&nbsp;</h2><h3 id="efe"></h3><br>
+		<h2 class="isimTarih">Halil İbrahim Ekerci 26 Ekim&nbsp;</h2><h3 id="halil"></h3><br>
+		<h2 class="isimTarih">Hamit Çukur 24 Kasım&nbsp;</h2><h3 id="hamit"></h3><br>
+	</div>
+
+
+</body>
+</html>
+<script type="text/javascript">
+	function fo(ay, gun, isim) {
+		var simdikiTarih = new Date();
+		var simdikiyil = simdikiTarih.getFullYear();
+		var temp = new Date(simdikiyil, ay-1, gun);
+		if (
+			temp.getTime() - simdikiTarih.getTime() < 0 
+			) {
+				temp = new Date(simdikiyil+1, ay-1, gun)
+				}
+		var fark = simdikiTarih.getTime() - temp.getTime()
+		var saniye = fark/1000
+		var dk = saniye/60
+		var saat = dk/60
+		var gun = saat/24
+		gun = Math.ceil(-gun);
+		var que = document.getElementById(isim);
+		if(gun==365){
+			que.innerHTML="🎉🎉🎉🎉🎉🎉🎉🎉"
+			return
+	}
+		que.innerHTML = gun+" gün var"
+
+	}
+	fo(5, 13, "bedo");
+	fo(11, 24, "hamit");
+	fo(4, 11, "omer");
+	fo(1, 29, "arda");
+	fo(10, 26, "halil");
+	fo(6, 27, "toprak");
+	fo(9, 21, "efe");
+	fo(7, 9, "emre");
+	fo(6, 18, "emek");
+	fo(1, 23, "bora");
+</script>
+<style type="text/css">
+	#container h2{
+		display: inline-block;
+
+	}
+	#container h3{
+		display: inline-block;
+
+	}
+</style>
